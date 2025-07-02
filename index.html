@@ -4,32 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- SEO: Título e Descrição -->
-    <title>UNIECO - Instituto de Teologia em Brasília-DF</title>
-    <meta name="description" content="Referência em ensino teológico no Centro-Oeste. Cursos de Teologia, Pós-Graduação e Capacitação em Capelania na Asa Sul, Brasília.">
+    <title>UNIECO - Formação em Teologia</title>
+    <meta name="description" content="Aprofunde-se na doutrina com os cursos de Teologia da UNIECO. Formação com excelência acadêmica e fidelidade às Escrituras.">
 
-    <!-- SEO: Palavras-chave -->
-    <meta name="keywords" content="curso de teologia em Brasília, escola de teologia DF, UNIECO, bacharel em teologia, curso de capelania DF">
+    <meta name="keywords" content="curso de teologia, pós-graduação em teologia, teologia sistemática, capelania, UNIECO, Brasília">
     
-    <!-- FAVICON -->
     <link rel="icon" href="logo.avif" type="image/avif">
 
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- ÍCONES (Font Awesome) -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" xintegrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Carrossel (Swiper.js) -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
 
-    <!-- Estilos Personalizados -->
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap');
         
         body {
-            font-family: 'Montserrat', sans-serif;
-            background-color: #F4F5E9;
+            font-family: 'Poppins', sans-serif;
+            background-color: #ffffff;
+            color: #111827;
         }
 
         :root {
@@ -37,173 +31,116 @@
             --cor-acento: #f89210;
         }
 
-        .bg-primaria { background-color: var(--cor-primaria); }
         .bg-acento { background-color: var(--cor-acento); }
-        .text-primaria { color: var(--cor-primaria); }
         .text-acento { color: var(--cor-acento); }
-
-        /* Animações */
-        @keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
-        .fade-in { animation: fadeIn 0.8s ease-out forwards; }
-
-        /* Estilos para o Swiper (Carrossel de Avaliações) */
+        .border-acento { border-color: var(--cor-acento); }
+        
         .testimonial-swiper .swiper-slide {
             display: flex;
             justify-content: center;
             align-items: center;
             padding: 1rem 0;
         }
-        
-        /* Estilos da Seção Hero */
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: 
-                linear-gradient(to bottom, rgba(10, 29, 17, 0.7), rgba(20, 59, 33, 0.9)),
-                url('biblia.avif');
-            background-color: var(--cor-primaria);
-            background-size: cover;
-            background-position: center;
-            filter: blur(5px);
-            transform: scale(1.1);
-            z-index: 1;
+
+        .icon-glow {
+            filter: drop-shadow(0 0 8px rgba(248, 146, 16, 0.6));
         }
-        
-        /* Ajuste do Scroll para Header Responsivo */
-        html {
-            scroll-padding-top: 80px; /* Altura do header desktop */
+
+        #inicio {
+            background-image: url('fundom.avif');
         }
-        @media (max-width: 768px) {
-            html {
-                scroll-padding-top: 64px; /* Altura do header mobile */
+        @media (min-width: 768px) {
+            #inicio {
+                background-image: url('fundo.avif');
             }
+        }
+        
+        .image-shadow {
+            filter: drop-shadow(0px 10px 25px rgba(0, 0, 0, 0.3));
         }
     </style>
 </head>
-<body class="bg-gray-50">
-
-    <!-- CABEÇALHO - ATUALIZADO -->
-    <header class="fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-[rgba(20,59,33,0.85)] backdrop-blur-md h-16 md:h-20">
-        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 md:h-20">
-                <a href="#inicio" class="flex-shrink-0">
-                    <img src="logo.avif" alt="Logo UNIECO" class="h-12 md:h-14 w-auto object-contain">
-                </a>
-                <nav class="hidden md:flex flex-1 justify-center">
-                    <div class="flex items-center space-x-6">
-                        <a class="hover:text-orange-400 font-medium px-2 text-sm xl:text-base transition-colors text-white" href="#about">A Escola</a>
-                        <a class="hover:text-orange-400 font-medium px-2 text-sm xl:text-base transition-colors text-white" href="#courses">Cursos</a>
-                        <a class="hover:text-orange-400 font-medium px-2 text-sm xl:text-base transition-colors text-white" href="#testimonials">Avaliações</a>
-                        <a class="hover:text-orange-400 font-medium px-2 text-sm xl:text-base transition-colors text-white" href="#contact">Contato</a>
-                    </div>
-                </nav>
-                <div class="hidden md:block">
-                    <a href="https://wa.me/556195513464?text=Olá!%20Visitei%20o%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="inline-flex items-center bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded-lg transition-colors text-sm whitespace-nowrap">
-                        <span>Fale Conosco</span>
-                    </a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-white focus:outline-none z-50">
-                        <i class="fas fa-bars text-2xl"></i>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-    
-    <!-- Menu Mobile - ATUALIZADO -->
-    <div id="mobile-menu" class="fixed top-0 left-0 w-full z-40 bg-[rgba(20,59,33,0.95)] backdrop-blur-md pt-16 transition-transform duration-300 ease-in-out -translate-y-full">
-        <a href="#about" class="mobile-link block text-white text-xl text-center py-3 hover:text-acento w-full">A Escola</a>
-        <a href="#courses" class="mobile-link block text-white text-xl text-center py-3 hover:text-acento w-full">Cursos</a>
-        <a href="#testimonials" class="mobile-link block text-white text-xl text-center py-3 hover:text-acento w-full">Avaliações</a>
-        <a href="#contact" class="mobile-link block text-white text-xl text-center py-3 hover:text-acento w-full">Contato</a>
-    </div>
+<body class="antialiased">
 
     <main>
-        <!-- SEÇÃO HERO - ATUALIZADA -->
-        <section id="inicio" class="relative hero text-white min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-            <div class="container mx-auto px-4 text-center relative z-10">
-                <img src="logo.avif" alt="Logo UNIECO" class="h-28 md:h-36 w-auto mx-auto mb-6">
-                <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">Aprofunde sua Vocação Teológica</h1>
-                <p class="text-lg opacity-90 max-w-2xl mx-auto mt-4">Cursos de Teologia, Pós-Graduação e Capelania para transformar seu ministério e sua vida.</p>
-                <a href="#courses" class="mt-8 inline-block bg-acento hover:bg-[#e06b15] text-white font-bold py-3 px-8 rounded-lg transition-transform hover:scale-105">Conheça os Cursos</a>
-            </div>
-        </section>
-
-        <!-- SEÇÃO "POR QUE A UNIECO?" -->
-        <section id="about" class="py-16 bg-white">
-            <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primaria">Por que estudar na UNIECO?</h2>
-                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Benefício 1 -->
-                    <div class="text-center p-6 space-y-3">
-                        <div class="mx-auto w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mb-4">
-                            <i class="fa-solid fa-book-open text-4xl text-acento"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800">Aumentar seu rendimento nos estudos bíblicos</h3>
+        <section id="inicio" class="relative flex items-end bg-cover bg-center min-h-screen pt-24">
+            <div class="absolute inset-0 bg-black/60"></div>
+            <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
+                <div class="grid md:grid-cols-2 gap-12 items-end">
+                    <div class="text-center md:text-left md:pb-16">
+                        <img src="logo.avif" alt="Logo UNIECO" class="h-16 w-auto mb-6 mx-auto md:mx-0">
+                        <h1 class="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white uppercase leading-tight">
+                            Aprofunde-se na Doutrina fazendo sua
+                            <span class="text-acento">Formação em Teologia</span>
+                        </h1>
+                        <p class="mt-4 text-lg lg:text-xl text-gray-300">
+                            Aprenda a sagrada teologia com excelência acadêmica e plena fidelidade às Escrituras.
+                        </p>
+                        <a href="#courses" class="mt-8 inline-block bg-acento hover:bg-orange-500 text-white font-bold py-3 px-8 rounded-lg text-lg transition-transform hover:scale-105">
+                            Quero Conhecer os Cursos
+                        </a>
                     </div>
-                    <!-- Benefício 2 -->
-                    <div class="text-center p-6 space-y-3">
-                        <div class="mx-auto w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mb-4">
-                            <i class="fa-solid fa-lightbulb text-4xl text-acento"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800">Se livrar das dúvidas sobre a Palavra de Deus</h3>
-                    </div>
-                    <!-- Benefício 3 -->
-                    <div class="text-center p-6 space-y-3">
-                        <div class="mx-auto w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mb-4">
-                            <i class="fa-solid fa-microphone-lines text-4xl text-acento"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800">Alcançar confiança ao pregar e ensinar</h3>
-                    </div>
-                    <!-- Benefício 4 -->
-                    <div class="text-center p-6 space-y-3">
-                        <div class="mx-auto w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mb-4">
-                            <i class="fa-solid fa-magnifying-glass text-4xl text-acento"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800">Ter segurança para pesquisar qualquer assunto teológico</h3>
-                    </div>
-                    <!-- Benefício 5 -->
-                    <div class="text-center p-6 space-y-3">
-                        <div class="mx-auto w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mb-4">
-                            <i class="fa-solid fa-hand-holding-heart text-4xl text-acento"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800">Desenvolver maturidade para ajudar outras pessoas</h3>
-                    </div>
-                    <!-- Benefício 6 -->
-                    <div class="text-center p-6 space-y-3">
-                        <div class="mx-auto w-20 h-20 flex items-center justify-center bg-orange-100 rounded-full mb-4">
-                            <i class="fa-solid fa-arrow-trend-up text-4xl text-acento"></i>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-800">Fazer um ótimo investimento na sua vida espiritual</h3>
+                    <div class="mt-8 md:mt-0">
+                        <img src="site1.avif" alt="Foto do Pastor ou Professor" class="w-full max-w-md mx-auto h-auto image-shadow">
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO CURSOS E PREÇOS -->
-        <section id="courses" class="py-16">
+        <section id="about" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primaria">Nossos Cursos</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Por que estudar na UNIECO?</h2>
                 <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- Card Capelania -->
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 space-y-3">
+                        <i class="fa-solid fa-book-open text-3xl text-acento icon-glow"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Estudos Bíblicos</h3>
+                        <p class="text-gray-600">Aumente seu rendimento e profundidade nos estudos da Palavra de Deus.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 space-y-3">
+                        <i class="fa-solid fa-microphone-lines text-3xl text-acento icon-glow"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Confiança para Pregar</h3>
+                        <p class="text-gray-600">Alcance a tão desejada confiança ao pregar e ensinar as Escrituras.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 space-y-3">
+                        <i class="fa-solid fa-magnifying-glass text-3xl text-acento icon-glow"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Segurança na Pesquisa</h3>
+                        <p class="text-gray-600">Tenha segurança para pesquisar e discorrer sobre qualquer assunto teológico.</p>
+                    </div>
+                    <div class="bg-white p-6 rounded-xl border border-gray-200 space-y-3">
+                        <i class="fa-solid fa-hand-holding-heart text-3xl text-acento icon-glow"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Maturidade Ministerial</h3>
+                        <p class="text-gray-600">Desenvolva maturidade espiritual para ajudar e aconselhar outras pessoas.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl border border-gray-200 space-y-3">
+                        <i class="fa-solid fa-graduation-cap text-3xl text-acento icon-glow"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Corpo Docente Qualificado</h3>
+                        <p class="text-gray-600">Aprenda com professores experientes e dedicados à sã doutrina.</p>
+                    </div>
+                     <div class="bg-white p-6 rounded-xl border border-gray-200 space-y-3">
+                        <i class="fa-solid fa-arrow-trend-up text-3xl text-acento icon-glow"></i>
+                        <h3 class="text-xl font-bold text-gray-900">Investimento na sua Vocação</h3>
+                        <p class="text-gray-600">Faça um ótimo investimento na sua vida espiritual e no seu ministério.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="courses" class="py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Nossos Cursos</h2>
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <div class="bg-white rounded-xl shadow-lg p-8 space-y-4 flex flex-col transition-transform hover:scale-105">
-                        <h3 class="text-2xl font-bold text-primaria text-center">Capacitação em Capelania</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 text-center">Capacitação em Capelania</h3>
                         <p class="text-4xl font-extrabold text-center text-acento">R$120<span class="text-lg font-semibold">,00</span></p>
                         <ul class="space-y-3 text-gray-600 flex-grow">
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Carga horária: 16h</li>
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Especializações: Hospitalar, Prisional, Escolar</li>
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Certificado de Conclusão</li>
                         </ul>
-                        <a href="https://wa.me/556195513464?text=Olá!%20Tenho%20interesse%20na%20Capacitação%20em%20Capelania." target="_blank" class="block w-full text-center bg-acento hover:bg-[#e06b15] text-white font-bold py-3 rounded-lg transition-colors">Inscreva-se</a>
+                        <a href="https://wa.me/556195513464?text=Olá!%20Tenho%20interesse%20na%20Capacitação%20em%20Capelania." target="_blank" class="block w-full text-center bg-acento hover:bg-orange-500 text-white font-bold py-3 rounded-lg transition-colors">Inscreva-se</a>
                     </div>
-                    <!-- Card Teologia -->
                     <div class="bg-white rounded-xl shadow-lg p-8 space-y-4 flex flex-col transition-transform hover:scale-105 border-2 border-acento">
-                        <h3 class="text-2xl font-bold text-primaria text-center">Bacharel em Teologia</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 text-center">Bacharel em Teologia</h3>
                         <p class="text-4xl font-extrabold text-center text-acento">R$380<span class="text-lg font-semibold">,00</span></p>
                         <ul class="space-y-3 text-gray-600 flex-grow">
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Duração: 24 meses</li>
@@ -211,11 +148,10 @@
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Corpo docente qualificado</li>
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Material didático incluso</li>
                         </ul>
-                        <a href="https://wa.me/556195513464?text=Olá!%20Tenho%20interesse%20no%20Bacharel%20em%20Teologia." target="_blank" class="block w-full text-center bg-acento hover:bg-[#e06b15] text-white font-bold py-3 rounded-lg transition-colors">Inscreva-se</a>
+                        <a href="https://wa.me/556195513464?text=Olá!%20Tenho%20interesse%20no%20Bacharel%20em%20Teologia." target="_blank" class="block w-full text-center bg-acento hover:bg-orange-500 text-white font-bold py-3 rounded-lg transition-colors">Inscreva-se</a>
                     </div>
-                    <!-- Card Pós-Graduação -->
                     <div class="bg-white rounded-xl shadow-lg p-8 space-y-4 flex flex-col transition-transform hover:scale-105">
-                        <h3 class="text-2xl font-bold text-primaria text-center">Pós-Graduação em Teologia</h3>
+                        <h3 class="text-2xl font-bold text-gray-900 text-center">Pós-Graduação em Teologia</h3>
                         <p class="text-4xl font-extrabold text-center text-acento">Consulte</p>
                         <ul class="space-y-3 text-gray-600 flex-grow">
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Duração: 6 meses</li>
@@ -223,33 +159,31 @@
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Aprofundamento teológico</li>
                             <li class="flex items-center"><i class="fa-solid fa-check text-green-500 mr-2"></i>Vagas limitadas</li>
                         </ul>
-                        <a href="https://wa.me/556195513464?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pós-Graduação." target="_blank" class="block w-full text-center bg-acento hover:bg-[#e06b15] text-white font-bold py-3 rounded-lg transition-colors">Saber Mais</a>
+                        <a href="https://wa.me/556195513464?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20a%20Pós-Graduação." target="_blank" class="block w-full text-center bg-acento hover:bg-orange-500 text-white font-bold py-3 rounded-lg transition-colors">Saber Mais</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO AVALIAÇÕES -->
-        <section id="testimonials" class="py-16 bg-primaria text-white">
+        <section id="testimonials" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
+                 <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">O que nossos alunos dizem</h2>
                 <div class="swiper testimonial-swiper">
                     <div class="swiper-wrapper">
-                        <!-- Slide 1 -->
                         <div class="swiper-slide">
-                            <div class="text-center max-w-2xl mx-auto">
+                            <div class="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
                                 <div class="text-yellow-400 mb-3 text-2xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="text-xl italic leading-relaxed">"Ótimo lugar para aprender mais sobre a Bíblia, a Palavra de Deus."</p>
+                                <p class="text-xl italic leading-relaxed text-gray-700">"Ótimo lugar para aprender mais sobre a Bíblia, a Palavra de Deus."</p>
                             </div>
                         </div>
-                        <!-- Slide 2 -->
                         <div class="swiper-slide">
-                            <div class="text-center max-w-2xl mx-auto">
+                            <div class="text-center max-w-2xl mx-auto bg-white p-8 rounded-xl shadow-lg">
                                 <div class="text-yellow-400 mb-3 text-2xl">
                                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                                 </div>
-                                <p class="text-xl italic leading-relaxed">"Referência em ensino teológico no Distrito Federal."</p>
+                                <p class="text-xl italic leading-relaxed text-gray-700">"Referência em ensino teológico no Distrito Federal."</p>
                             </div>
                         </div>
                     </div>
@@ -258,52 +192,47 @@
             </div>
         </section>
 
-        <!-- SEÇÃO FAQ -->
-        <section id="faq" class="py-16 bg-white">
+        <section id="faq" class="py-20">
             <div class="container mx-auto px-4 max-w-3xl">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primaria">Dúvidas Frequentes</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Dúvidas Frequentes</h2>
                 <div class="space-y-4">
-                    <!-- FAQ Item 1 -->
-                    <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center hover:bg-gray-50">
-                            <span class="font-semibold text-lg text-gray-800">Quais os pré-requisitos para os cursos?</span>
-                            <i class="fas fa-chevron-down transition-transform"></i>
+                    <div class="faq-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full text-left p-5 flex justify-between items-center">
+                            <span class="font-semibold text-lg text-gray-900">Quais os pré-requisitos para os cursos?</span>
+                            <i class="fas fa-chevron-down transition-transform text-acento"></i>
                         </button>
                         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                            <p class="p-4 pt-0 text-gray-600">Para o Bacharel em Teologia e Pós-Graduação, é necessário ter o Ensino Médio completo. Para a Capacitação em Capelania, não há pré-requisito de escolaridade.</p>
+                            <p class="p-5 pt-0 text-gray-600">Para o Bacharel em Teologia e Pós-Graduação, é necessário ter o Ensino Médio completo. Para a Capacitação em Capelania, não há pré-requisito de escolaridade.</p>
                         </div>
                     </div>
-                    <!-- FAQ Item 2 -->
-                    <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center hover:bg-gray-50">
-                            <span class="font-semibold text-lg text-gray-800">Os cursos são reconhecidos?</span>
-                            <i class="fas fa-chevron-down transition-transform"></i>
+                    <div class="faq-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full text-left p-5 flex justify-between items-center">
+                            <span class="font-semibold text-lg text-gray-900">Os cursos são reconhecidos?</span>
+                            <i class="fas fa-chevron-down transition-transform text-acento"></i>
                         </button>
                         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                            <p class="p-4 pt-0 text-gray-600">Nossos cursos são de natureza livre e ministerial, focados na formação e capacitação para o serviço eclesiástico e ministerial. Eles concedem certificados de conclusão válidos para essas finalidades.</p>
+                            <p class="p-5 pt-0 text-gray-600">Nossos cursos são de natureza livre e ministerial, focados na formação e capacitação para o serviço eclesiástico e ministerial. Eles concedem certificados de conclusão válidos para essas finalidades.</p>
                         </div>
                     </div>
-                    <!-- FAQ Item 3 -->
-                    <div class="faq-item border border-gray-200 rounded-lg overflow-hidden">
-                        <button class="faq-question w-full text-left p-4 flex justify-between items-center hover:bg-gray-50">
-                            <span class="font-semibold text-lg text-gray-800">Como posso realizar a matrícula?</span>
-                            <i class="fas fa-chevron-down transition-transform"></i>
+                    <div class="faq-item bg-white border border-gray-200 rounded-lg overflow-hidden">
+                        <button class="faq-question w-full text-left p-5 flex justify-between items-center">
+                            <span class="font-semibold text-lg text-gray-900">Como posso realizar a matrícula?</span>
+                            <i class="fas fa-chevron-down transition-transform text-acento"></i>
                         </button>
                         <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                            <p class="p-4 pt-0 text-gray-600">A matrícula pode ser feita presencialmente em nossa secretaria ou entrando em contato conosco pelo WhatsApp. Clique nos botões "Inscreva-se" para iniciar a conversa.</p>
+                            <p class="p-5 pt-0 text-gray-600">A matrícula pode ser feita presencialmente em nossa secretaria ou entrando em contato conosco pelo WhatsApp. Clique nos botões "Inscreva-se" para iniciar a conversa.</p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SEÇÃO CONTATO E MAPA -->
-        <section id="contact" class="py-16">
+        <section id="contact" class="py-20 bg-gray-50">
             <div class="container mx-auto px-4">
-                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-primaria">Entre em Contato</h2>
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-gray-900">Entre em Contato</h2>
                 <div class="grid md:grid-cols-2 gap-8 items-start">
                     <div class="space-y-4">
-                        <h3 class="text-2xl font-bold text-gray-800">UNIECO Brasília</h3>
+                        <h3 class="text-2xl font-bold text-gray-900">UNIECO Brasília</h3>
                         <p class="flex items-start gap-4 text-gray-700"><i class="fa-solid fa-location-dot w-6 text-center text-xl text-acento mt-1"></i><span>SGAS 611, Ed. Neusa Maria de Jesus - Asa Sul, Brasília - DF, 70200-710</span></p>
                         <p class="flex items-center gap-4 text-gray-700"><i class="fa-solid fa-phone w-6 text-center text-xl text-acento"></i><span>(61) 9551-3464</span></p>
                         <p class="flex items-center gap-4 text-gray-700"><i class="fa-solid fa-envelope w-6 text-center text-xl text-acento"></i><span>institutounieco@gmail.com</span></p>
@@ -316,56 +245,23 @@
         </section>
     </main>
 
-    <!-- RODAPÉ - ATUALIZADO -->
-    <footer class="bg-gray-900 text-white py-6">
+    <footer class="bg-gray-900 text-white py-8">
         <div class="container mx-auto px-4 text-center">
             <div class="flex justify-center gap-6 mb-4">
                 <a href="https://www.facebook.com/uniecodf/?locale=pt_BR" target="_blank" aria-label="Página da UNIECO no Facebook" class="text-2xl hover:text-orange-400 transition-colors">
                     <i class="fa-brands fa-facebook"></i>
                 </a>
             </div>
-            <p class="text-gray-400 text-sm">© 2025 UNIECO. Todos os direitos reservados.</p>
+            <p class="text-gray-400">© 2025 UNIECO. Todos os direitos reservados.</p>
         </div>
     </footer>
     
-    <!-- BOTÃO FLUTUANTE DO WHATSAPP -->
     <a href="https://wa.me/556195513464?text=Olá!%20Visitei%20o%20site%20e%20gostaria%20de%20mais%20informações." target="_blank" class="fixed bottom-5 right-5 bg-[#25D366] text-white rounded-full shadow-lg flex items-center justify-center !h-14 !w-14 transition-transform hover:scale-110">
         <i class="fa-brands fa-whatsapp text-3xl"></i>
     </a>
 
-    <!-- SCRIPTS -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script>
-        // Menu Mobile - ATUALIZADO
-        const mobileMenuButton = document.getElementById('mobile-menu-button');
-        const mobileMenu = document.getElementById('mobile-menu');
-        const hamburgerIcon = mobileMenuButton.querySelector('i');
-
-        mobileMenuButton.addEventListener('click', () => {
-            const isOpen = !mobileMenu.classList.contains('-translate-y-full');
-            if (isOpen) {
-                // Fechar
-                mobileMenu.classList.add('-translate-y-full');
-                document.body.classList.remove('overflow-hidden');
-                hamburgerIcon.classList.replace('fa-times', 'fa-bars');
-            } else {
-                // Abrir
-                mobileMenu.classList.remove('-translate-y-full');
-                document.body.classList.add('overflow-hidden');
-                hamburgerIcon.classList.replace('fa-bars', 'fa-times');
-            }
-        });
-
-        // Fechar menu ao clicar em um link
-        const mobileMenuLinks = document.querySelectorAll('.mobile-link');
-        mobileMenuLinks.forEach(link => {
-            link.addEventListener('click', () => {
-                mobileMenu.classList.add('-translate-y-full');
-                document.body.classList.remove('overflow-hidden');
-                hamburgerIcon.classList.replace('fa-times', 'fa-bars');
-            });
-        });
-
         // Carrossel de Avaliações
         const testimonialSwiper = new Swiper('.testimonial-swiper', {
             loop: true,
